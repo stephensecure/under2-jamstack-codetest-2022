@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Image from 'next/image'
+import { Heading } from "../../atoms/Heading"
+
 
 
 Articles.propTypes = {
@@ -17,15 +19,24 @@ export function Articles({ src, alt, publishDate, heading}) {
     }
 
     return (
-        <div className="article-container"> 
-            <div className="article-image-header"> 
-                <Image
+        // <div className="article-container md:col-span-4"> 
+        <div className="md:col-span-4 article-container"> 
+            {/* <div className="article-image-header">  */}
+            <div className=""> 
+            <img 
+                className = "article-image"
+                src={src}
+                alt={alt}
+                width={500}
+                height={500}
+            />
+                {/* <Image
                     className = "article-image"
                     src={src}
                     alt={alt}
                     width={500}
                     height={500}
-                />
+                /> */}
             </div>
             <div className="article-text"> 
                 <p className = "article-date"> {articleDate(publishDate)}</p>

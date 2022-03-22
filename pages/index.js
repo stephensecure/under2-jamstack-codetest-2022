@@ -29,7 +29,7 @@ export default function Home() {
         <HomeHero />
         <FeaturedBenefits padding="mdTopOnly"  />
         <FeaturedPartners partners={featuredPartnersJSON} />
-        <LatestArticle latestArticles={articlesJSON} />
+        <LatestArticle latestArticles={articlesJSON}  padding="mdTopOnly" />
         <FeatureForm /> 
       </div>
       <GlobalFooter />
