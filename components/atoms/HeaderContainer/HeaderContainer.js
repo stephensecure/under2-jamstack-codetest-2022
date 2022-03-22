@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-ArticleContainer.propTypes = {
+HeaderContainer.propTypes = {
+    className: PropTypes.string,
     children: PropTypes.node,
 }
 
-export function ArticleContainer({ children, padding = "md" }) {
+export function HeaderContainer({ className = "", children, padding = "md" }) {
     
     const variants = {
         padding: {
@@ -16,9 +17,9 @@ export function ArticleContainer({ children, padding = "md" }) {
     }
 
     const paddingClassName = variants.padding[padding]
-        
-        return (
-        <div className={`grid mx-auto px-6 sm:px-8 md:px-12 max-w-[1156px] lg:px-16 xl:px-20 box-content gap-6 ${paddingClassName}`}>
+    
+    return (
+        <div className={`mx-auto p-6 sm:px-8  max-w-[1156px] box-content gap-6 ${className}`}>
             {children}
         </div>
     )

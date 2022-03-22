@@ -23,12 +23,18 @@ body {
     padding: 1rem;
 }
 
+.article-heading {
+    padding: 1rem;
+}
+
 .article-image-header {
     display: block;
     width: auto;
 }
 
 .article-image {
+    width: 120px;
+    height: 120px;
     min-width: 100px !important;
     min-height: 100px !important;
     display: inline-block;
@@ -65,19 +71,8 @@ body {
     .container {
         display: flex;
     }
-
-    .article-container {
-        padding: 1rem;
-        display: inline-block !important;
-    }
-
-    .article-image {
-        display: inline-block !important;
-       
-    }
-    
+   
     .article-date {
-        font-size: 9px;
         font-weight: 600;
     }
     
@@ -87,3 +82,17 @@ body {
     }
 }
 
+@media  (min-width: 768px) {
+
+    .article-container {
+        padding: 1rem;
+        display: inline-block !important;
+    }
+
+    .article-image {
+        width: auto;
+        height: auto;
+        display: inline-block !important;
+    }
+    
+}
